@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "ReportTag": {
+            "required": false,
+            "type": "string"
+        },
+        "Limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

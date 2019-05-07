@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "FilePath": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

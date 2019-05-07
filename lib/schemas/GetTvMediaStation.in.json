@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "StationID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

@@ -1,0 +1,410 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "Ids": {
+                    "description": "Search by one or more Ids.  Ex: Movie/123.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Skip": {
+                    "description": "Rows to skip, used for paging. Default is 0.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Take": {
+                    "description": "Rows to return, used for paging. Default is 10, limit is 50.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Providers": {
+                    "description": "List of availability providers.  See /Common/GetCommonEnumerators endpoint for complete list.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "NOT_SET",
+                            "AmazonInstantVideo",
+                            "NBC",
+                            "ABC",
+                            "FOX",
+                            "FandangoMovies",
+                            "GooglePlay",
+                            "CBS",
+                            "The_CW",
+                            "TBS",
+                            "Nickelodeon",
+                            "PBS",
+                            "Discovery_Channel",
+                            "HBO",
+                            "Disney_XD",
+                            "USA_Network",
+                            "Hulu",
+                            "AmazonPrimeVideo",
+                            "iTunes",
+                            "Netflix",
+                            "AtomTickets"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "DeliveryMethods": {
+                    "description": "List of availability delivery methods. See /Common/GetCommonEnumerators endpoint for complete list.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "NOT_SET",
+                            "Scheduled",
+                            "Ticket",
+                            "Physical",
+                            "OnDemand"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "OfferTypes": {
+                    "description": "List of availability offer types. See /Common/GetCommonEnumerators endpoint for complete list.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "NOT_SET",
+                            "Buy",
+                            "Subscription",
+                            "Free",
+                            "Rent"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "VideoQualities": {
+                    "description": "List of availability video qualities. See /Common/GetCommonEnumerators endpoint for complete list.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "NOT_SET",
+                            "HD",
+                            "UHD",
+                            "SD"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "ProgramTypes": {
+                    "description": "List of program types. See /Common/GetCommonEnumerators endpoint for complete list.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "Movie",
+                            "Show",
+                            "Game",
+                            "Season",
+                            "Episode"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "AvailabilityCountries": {
+                    "description": "List of 2 character country codes.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Genres": {
+                    "description": "List of genres (movie and show).",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Tags": {
+                    "description": "List of tags (movie and show).",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Certifications": {
+                    "description": "List of certifications for movie and show.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "PersonNames": {
+                    "description": "List of names. Maximum of 3.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "PeopleIds": {
+                    "description": "Person Ids.  Currently supports one person.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Jobs": {
+                    "description": "List of Jobs a contributor can have.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ReleaseTypes": {
+                    "description": "List of release types for both movie and show.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "Digital",
+                            "Festival",
+                            "Physical",
+                            "Premiere",
+                            "Theatrical_Limited_Release",
+                            "Theatrical_Wide_Release",
+                            "TV",
+                            "On_Demand_Release",
+                            "Show_Release"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "ReleaseCountries": {
+                    "description": "List of 2 character country codes when filtering on releases.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "YearRange_Start": {
+                    "description": "Filter results based on start and end original release year.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "YearRange_End": {
+                    "description": "Filter results based on start and end original release year.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ReleaseDateRange_Start": {
+                    "description": "Filter results based on any release date range.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "ReleaseDateRange_End": {
+                    "description": "Filter results based on any release date range.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "OriginalReleaseDateRange_Start": {
+                    "description": "Filter results based on original release date range.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "OriginalReleaseDateRange_End": {
+                    "description": "Filter results based on original release date range.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "Package": {
+                    "type": "string"
+                },
+                "Title": {
+                    "description": "Title search.",
+                    "type": "string"
+                },
+                "ShowId": {
+                    "description": "Filter results to match a show.  Use for locating seasons and episodes for a show.",
+                    "type": "string"
+                },
+                "SeasonId": {
+                    "description": "Filter results to match a season.  Use for locating episodes for a season.",
+                    "type": "string"
+                },
+                "Includes": {
+                    "description": "Include sub objects from the program",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "Releases",
+                            "Contributors",
+                            "AlternateTitles",
+                            "Descriptions",
+                            "Companies",
+                            "Tags",
+                            "ExternalIds",
+                            "Videos",
+                            "Images",
+                            "Availabilities",
+                            "Genres",
+                            "Trends"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "Culture": {
+                    "description": "Specify the country and language",
+                    "type": "string",
+                    "enum": [
+                        "NOT_SET",
+                        "English_US",
+                        "English_CA",
+                        "English_UK",
+                        "English_AU"
+                    ]
+                },
+                "ExternalId": {
+                    "description": "Filter results matching external Id",
+                    "type": "string"
+                },
+                "ExternalIdType": {
+                    "description": "Filter results matching external Id",
+                    "type": "string"
+                },
+                "HasVideo": {
+                    "description": "Filter results based on having video content",
+                    "type": "boolean"
+                },
+                "VideoId": {
+                    "description": "Filter results based on matching a single Video ID.",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "VideoTargetCountries": {
+                    "description": "List of 2 character country codes when filtering on video target countries.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "VideoTargetLanguages": {
+                    "description": "Specify video target languages. This takes into consideration both language spoken and language subtitled.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "SortByTimeStamp": {
+                    "description": "Sort results based on last modified descending.  Default is sorted by _score. DEPRECIATED! Use SortBy instead.",
+                    "type": "boolean"
+                },
+                "SortBy": {
+                    "description": "SortBy",
+                    "type": "string",
+                    "enum": [
+                        "NOT_SET",
+                        "Relevance",
+                        "TimeStamp",
+                        "IvaRating",
+                        "ReleaseDate",
+                        "AverageTrendRank",
+                        "TrendRank"
+                    ]
+                },
+                "ModifiedRecordsSince": {
+                    "description": "Filter results based on timestamp.  Returns >= value timestamp (UTC) provided.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "OriginatingNetworks": {
+                    "description": "The Network the current first run shows appear on. Ex: ABC, NBC, Netflix, etc.  ",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Status": {
+                    "description": "The status of the movie or show.  Ex: Returning_Series, in_production, etc.  ",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Revenue": {
+                    "description": "Filter results where movie revenue is greater than or equal to this value.",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Budget": {
+                    "description": "Filter results where movie budget is greater than or equal to this value.",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Minimum_IvaRating": {
+                    "description": "Filter results with a minimum Rating greater than or equal to this value. (0 to 100)",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Minimum_EncodeDate": {
+                    "description": "Filter results based on encode date.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "IncludeDeleted": {
+                    "description": "Include Soft Deleted Records. Default (false)",
+                    "type": "boolean"
+                },
+                "TrendSourceIds": {
+                    "description": "Program Trend Source Ids.  Ex: 2,3.",
+                    "type": "array",
+                    "items": {
+                        "format": "int32",
+                        "type": "integer",
+                        "x-nullable": false
+                    }
+                },
+                "TrendBrands": {
+                    "description": "Program Trend Brands.  Ex: IMDB,IVA",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "IMDB",
+                            "IVA",
+                            "BoxOfficeMojo",
+                            "TMDB",
+                            "RottenTomatoes",
+                            "TVGuide",
+                            "iTunes"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "TrendCountries": {
+                    "description": "Program Trend Countries.  Ex: US,CA.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "TrendListClassifiers": {
+                    "description": "Program Trend List Classifiers.  Ex: AVOD,SVOD.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "Publisher",
+                            "TVOD"
+                        ],
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

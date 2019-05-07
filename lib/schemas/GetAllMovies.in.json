@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "Take": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Skip": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Includes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Genres",
+                    "Releases",
+                    "Contributors",
+                    "AlternateTitles",
+                    "Descriptions",
+                    "Companies",
+                    "Tags",
+                    "Images",
+                    "Videos",
+                    "ExternalIds",
+                    "Availabilities"
+                ],
+                "type": "string"
+            }
+        }
+    }
+}

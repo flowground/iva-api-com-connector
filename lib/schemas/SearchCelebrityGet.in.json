@@ -1,0 +1,247 @@
+{
+    "type": "object",
+    "properties": {
+        "Package": {
+            "required": false,
+            "type": "string"
+        },
+        "Ids": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Skip": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Take": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Includes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Images",
+                    "ExternalIds",
+                    "Descriptions",
+                    "AlternateNames"
+                ],
+                "type": "string"
+            }
+        },
+        "Name": {
+            "required": false,
+            "type": "string"
+        },
+        "FaceDetails_Age": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "FaceDetails_Beard": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_Mustache": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_Emotions": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "UNKNOWN",
+                    "HAPPY",
+                    "SAD",
+                    "ANGRY",
+                    "CONFUSED",
+                    "DISGUSTED",
+                    "SURPRISED",
+                    "CALM"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "FaceDetails_Eyeglasses": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_Sunglasses": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_EyesOpen": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_MouthOpen": {
+            "required": false,
+            "type": "boolean"
+        },
+        "FaceDetails_Gender": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "UNKNOWN",
+                "Male",
+                "Female"
+            ]
+        },
+        "FaceDetails_Smile": {
+            "required": false,
+            "type": "boolean"
+        },
+        "MinImageHeight": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "MinImageWidth": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "ImageType": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "UNKNOWN",
+                "Poster",
+                "Photo",
+                "Portrait"
+            ]
+        },
+        "ImageViolence": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "format": "int32",
+                "type": "integer",
+                "nullable": false
+            }
+        },
+        "ImageSexuality": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "format": "int32",
+                "type": "integer",
+                "nullable": false
+            }
+        },
+        "ImageTags": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "OfficialImage": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ImageEntertainmentIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "BirthName": {
+            "required": false,
+            "type": "string"
+        },
+        "Gender": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "m",
+                "f"
+            ]
+        },
+        "BirthDate": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "BirthYear": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "BirthDayOfMonth": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "BirthMonthOfYear": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "DeathDayOfMonth": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "DeathMonthOfYear": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "ExternalId": {
+            "required": false,
+            "type": "string"
+        },
+        "ExternalIdType": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "IVA",
+                "TMDB",
+                "IMDB",
+                "Facebook",
+                "Instagram",
+                "Twitter",
+                "Freebase_MID",
+                "Freebase_ID",
+                "TvRage"
+            ]
+        },
+        "ModifiedRecordsSince": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "SortByTimeStamp": {
+            "required": false,
+            "type": "boolean"
+        },
+        "IncludeDeleted": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

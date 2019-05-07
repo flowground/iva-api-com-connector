@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "TheaterId": {
+            "required": true,
+            "type": "string"
+        },
+        "IdProvider": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "tms"
+            ]
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "MovieId": {
+            "required": true,
+            "type": "string"
+        },
+        "IdProvider": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "fandango",
+                "IVA"
+            ]
+        },
+        "Latitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "Longitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "ZipCode": {
+            "required": false,
+            "type": "string"
+        },
+        "Radius": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "StartDateTime": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "EndDateTime": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "ExcludeTheaterIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "TheaterChainCodes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

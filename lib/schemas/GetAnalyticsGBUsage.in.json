@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "ReportTag": {
+            "required": false,
+            "type": "string"
+        },
+        "Month": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ]
+        },
+        "Year": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

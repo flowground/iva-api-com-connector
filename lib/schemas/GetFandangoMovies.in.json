@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "Type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "InTheaters",
+                "ComingSoon"
+            ]
+        },
+        "Latitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "Longitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "ZipCode": {
+            "required": false,
+            "type": "string"
+        },
+        "Radius": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

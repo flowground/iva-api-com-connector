@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "CountryID": {
+            "required": true,
+            "type": "string"
+        },
+        "RegionID": {
+            "required": true,
+            "type": "string"
+        },
+        "AreaID": {
+            "required": true,
+            "type": "string"
+        },
+        "LineupType": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "OTA",
+                "SAT",
+                "CAB",
+                "IPTV"
+            ]
+        },
+        "ProviderId": {
+            "required": false,
+            "type": "string"
+        },
+        "Detail": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "full",
+                "brief"
+            ]
+        }
+    }
+}

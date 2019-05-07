@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "Id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "SeasonNumber": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

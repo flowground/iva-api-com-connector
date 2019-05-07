@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "term": {
+            "required": false,
+            "type": "string"
+        },
+        "SelectFields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "SearchFields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Filter": {
+            "required": false,
+            "type": "string"
+        },
+        "OrderBy": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Top": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Skip": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "IncludeTotalResultCount": {
+            "required": false,
+            "type": "boolean"
+        },
+        "SearchMode": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

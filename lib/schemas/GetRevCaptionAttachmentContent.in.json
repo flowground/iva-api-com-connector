@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "Id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "Type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "WebVTT",
+                "Ttml",
+                "SubRip",
+                "Scc",
+                "Mcc",
+                "QtText",
+                "Transcript",
+                "Dfxp",
+                "CheetaCap",
+                "Stl",
+                "AvidDs",
+                "FacebookSubRip",
+                "Unknown"
+            ]
+        }
+    }
+}

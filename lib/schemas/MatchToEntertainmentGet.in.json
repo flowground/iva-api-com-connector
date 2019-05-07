@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "ProgramType": {
+            "required": true,
+            "type": "string"
+        },
+        "Title": {
+            "required": true,
+            "type": "string"
+        },
+        "AlternateTitles": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Year": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Cast": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Producers": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Directors": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Description": {
+            "required": false,
+            "type": "string"
+        },
+        "Poster": {
+            "required": false,
+            "type": "string"
+        },
+        "ReleaseDate": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "StringDistance": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

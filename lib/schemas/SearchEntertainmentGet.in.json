@@ -1,0 +1,399 @@
+{
+    "type": "object",
+    "properties": {
+        "Ids": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Skip": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Take": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Providers": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "NOT_SET",
+                    "AmazonInstantVideo",
+                    "NBC",
+                    "ABC",
+                    "FOX",
+                    "FandangoMovies",
+                    "GooglePlay",
+                    "CBS",
+                    "The_CW",
+                    "TBS",
+                    "Nickelodeon",
+                    "PBS",
+                    "Discovery_Channel",
+                    "HBO",
+                    "Disney_XD",
+                    "USA_Network",
+                    "Hulu",
+                    "AmazonPrimeVideo",
+                    "iTunes",
+                    "Netflix",
+                    "AtomTickets"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "DeliveryMethods": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "NOT_SET",
+                    "Scheduled",
+                    "Ticket",
+                    "Physical",
+                    "OnDemand"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "OfferTypes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "NOT_SET",
+                    "Buy",
+                    "Subscription",
+                    "Free",
+                    "Rent"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "VideoQualities": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "NOT_SET",
+                    "HD",
+                    "UHD",
+                    "SD"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "ProgramTypes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Movie",
+                    "Show",
+                    "Game",
+                    "Season",
+                    "Episode"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "AvailabilityCountries": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Genres": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Tags": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Certifications": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "PersonNames": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "PeopleIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Jobs": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "ReleaseTypes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Digital",
+                    "Festival",
+                    "Physical",
+                    "Premiere",
+                    "Theatrical_Limited_Release",
+                    "Theatrical_Wide_Release",
+                    "TV",
+                    "On_Demand_Release",
+                    "Show_Release"
+                ],
+                "type": "string",
+                "nullable": false
+            }
+        },
+        "ReleaseCountries": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "YearRange_Start": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "YearRange_End": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "ReleaseDateRange_Start": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "ReleaseDateRange_End": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "OriginalReleaseDateRange_Start": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "OriginalReleaseDateRange_End": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "Package": {
+            "required": false,
+            "type": "string"
+        },
+        "Title": {
+            "required": false,
+            "type": "string"
+        },
+        "ShowId": {
+            "required": false,
+            "type": "string"
+        },
+        "SeasonId": {
+            "required": false,
+            "type": "string"
+        },
+        "Includes": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Releases",
+                    "Contributors",
+                    "AlternateTitles",
+                    "Descriptions",
+                    "Companies",
+                    "Tags",
+                    "ExternalIds",
+                    "Videos",
+                    "Images",
+                    "Availabilities",
+                    "Genres",
+                    "Trends"
+                ],
+                "type": "string"
+            }
+        },
+        "Culture": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NOT_SET",
+                "English_US",
+                "English_CA",
+                "English_UK",
+                "English_AU"
+            ]
+        },
+        "ExternalId": {
+            "required": false,
+            "type": "string"
+        },
+        "ExternalIdType": {
+            "required": false,
+            "type": "string"
+        },
+        "HasVideo": {
+            "required": false,
+            "type": "boolean"
+        },
+        "VideoId": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "VideoTargetCountries": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "VideoTargetLanguages": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "SortByTimeStamp": {
+            "required": false,
+            "type": "boolean"
+        },
+        "SortBy": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NOT_SET",
+                "Relevance",
+                "TimeStamp",
+                "IvaRating",
+                "ReleaseDate",
+                "AverageTrendRank",
+                "TrendRank"
+            ]
+        },
+        "ModifiedRecordsSince": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "OriginatingNetworks": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Status": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Revenue": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "Budget": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "Minimum_IvaRating": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Minimum_EncodeDate": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "IncludeDeleted": {
+            "required": false,
+            "type": "boolean"
+        },
+        "TrendSourceIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "format": "int32",
+                "type": "integer",
+                "nullable": false
+            }
+        },
+        "TrendBrands": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "IMDB",
+                    "IVA",
+                    "BoxOfficeMojo",
+                    "TMDB",
+                    "RottenTomatoes",
+                    "TVGuide",
+                    "iTunes"
+                ],
+                "type": "string"
+            }
+        },
+        "TrendCountries": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "TrendListClassifiers": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "enum": [
+                    "Publisher",
+                    "TVOD"
+                ],
+                "type": "string"
+            }
+        }
+    }
+}

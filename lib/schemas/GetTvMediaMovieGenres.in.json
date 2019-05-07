@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

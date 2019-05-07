@@ -1,0 +1,75 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "Title": {
+                    "description": "Title of Show to be matched.",
+                    "type": "string"
+                },
+                "AlternateTitles": {
+                    "description": "Alternate Titles of Show to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Year": {
+                    "description": "Release Year of Show to be matched.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Cast": {
+                    "description": "Cast members of Show to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Producers": {
+                    "description": "Producers of Show to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Directors": {
+                    "description": "Directors of Show to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Description": {
+                    "description": "Description of Show to be matched.",
+                    "type": "string"
+                },
+                "Poster": {
+                    "description": "Poster of movie to be matched.",
+                    "type": "string"
+                },
+                "ReleaseDate": {
+                    "description": "Release Date of movie to be matched.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "StringDistance": {
+                    "description": "For fuzzy title match, default is 4, set to 0 for no fuzzy match.",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "Title"
+            ]
+        }
+    }
+}

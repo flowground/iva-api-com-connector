@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "Title": {
+                    "description": "Title of movie to be matched.",
+                    "type": "string"
+                },
+                "AlternateTitles": {
+                    "description": "Alternate Titles of movie to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Year": {
+                    "description": "Release Year of movie to be matched.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ReleaseDate": {
+                    "description": "Release Date of movie to be matched.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "Cast": {
+                    "description": "Cast members of movie to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Directors": {
+                    "description": "Directors of movie to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Description": {
+                    "description": "Description of movie to be matched.",
+                    "type": "string"
+                },
+                "Poster": {
+                    "description": "Poster of movie to be matched.",
+                    "type": "string"
+                },
+                "StringDistance": {
+                    "description": "For fuzzy title match, default is 4, set to 0 for no fuzzy match.",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "Title"
+            ]
+        }
+    }
+}

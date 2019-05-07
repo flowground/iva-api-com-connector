@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "ShowtimeId": {
+            "required": true,
+            "type": "string"
+        },
+        "IdProvider": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "fandango"
+            ]
+        }
+    }
+}

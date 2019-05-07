@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "CountryID": {
+            "required": true,
+            "type": "string"
+        },
+        "RegionID": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

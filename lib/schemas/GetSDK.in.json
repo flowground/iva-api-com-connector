@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "Client": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "akka_scala",
+                "android",
+                "async_scala",
+                "bash",
+                "clojure",
+                "cpprest",
+                "csharp",
+                "CsharpDotNet2",
+                "cwiki",
+                "dart",
+                "dynamic_html",
+                "elixir",
+                "flash",
+                "go",
+                "groovy",
+                "html",
+                "html2",
+                "java",
+                "javascript",
+                "javascript_closure_angular",
+                "jaxrs_cxf_client",
+                "jmeter",
+                "objc",
+                "perl",
+                "php",
+                "python",
+                "qt5cpp",
+                "ruby",
+                "scala",
+                "swagger",
+                "swagger_yaml",
+                "swift",
+                "swift3",
+                "tizen",
+                "typescript_angular",
+                "typescript_angular2",
+                "typescript_fetch",
+                "typescript_node"
+            ]
+        },
+        "RedirectToFile": {
+            "required": true,
+            "type": "boolean"
+        }
+    }
+}

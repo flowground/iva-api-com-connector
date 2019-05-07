@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ClientApiKey": {
+                    "description": "This is a secret key specific to each partner that wishes to use the Rev API.",
+                    "type": "string"
+                },
+                "UserApiKey": {
+                    "description": "This is a secret key specific to a Rev user, which identifies the user account under whose privileges the requested operation executes. This key can be obtained by logging in to Rev as the user in question and going to the Rev Account Settings page.",
+                    "type": "string"
+                },
+                "ReferenceId": {
+                    "description": "Optional order reference number.",
+                    "type": "string"
+                },
+                "VideoId": {
+                    "description": "ID of video to caption.",
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "NotificationUrl": {
+                    "description": "Optional URL to send notifications when order is complete.",
+                    "type": "string"
+                },
+                "UseSandbox": {
+                    "description": "Optional URL to send notifications when order is complete.",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "ClientApiKey"
+            ]
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "Latitude": {
+            "required": true,
+            "type": "number",
+            "format": "float"
+        },
+        "Longitude": {
+            "required": true,
+            "type": "number",
+            "format": "float"
+        },
+        "LineupType": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "OTA",
+                "SAT",
+                "CAB",
+                "IPTV"
+            ]
+        },
+        "ProviderId": {
+            "required": false,
+            "type": "string"
+        },
+        "Detail": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "full",
+                "brief"
+            ]
+        }
+    }
+}

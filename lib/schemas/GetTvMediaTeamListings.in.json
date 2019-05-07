@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "properties": {
+        "TvMediaApiKey": {
+            "required": true,
+            "type": "string"
+        },
+        "TeamID": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "LineupID": {
+            "required": true,
+            "type": "string"
+        },
+        "Start": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "End": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "TimeZone": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Channel": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "ExcludeChan": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "StartChan": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "EndChan": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Station": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "format": "int32",
+                "type": "integer",
+                "nullable": false
+            }
+        },
+        "ExcludeStation": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "format": "int32",
+                "type": "integer",
+                "nullable": false
+            }
+        },
+        "Search": {
+            "required": false,
+            "type": "string"
+        },
+        "ShowType": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "ExcludeShowType": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Id": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "SportType": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "League": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "Team": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "NotYetStarted": {
+            "required": false,
+            "type": "boolean"
+        },
+        "SportEventsOnly": {
+            "required": false,
+            "type": "boolean"
+        },
+        "DescriptiveVideoOnly": {
+            "required": false,
+            "type": "boolean"
+        },
+        "LiveOnly": {
+            "required": false,
+            "type": "boolean"
+        },
+        "NewShowsOnly": {
+            "required": false,
+            "type": "boolean"
+        },
+        "AdultContent": {
+            "required": false,
+            "type": "boolean"
+        },
+        "DisplayArtwork": {
+            "required": false,
+            "type": "boolean"
+        },
+        "Detail": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "full",
+                "brief"
+            ]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "MovieId": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "ShowId": {
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+        },
+        "Type": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "similar",
+                "similarShowsOnly",
+                "similarMoviesOnly"
+            ]
+        }
+    }
+}

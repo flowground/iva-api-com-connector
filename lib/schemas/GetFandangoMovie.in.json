@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "MovieId": {
+            "required": true,
+            "type": "string"
+        },
+        "IdProvider": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "fandango",
+                "IVA"
+            ]
+        }
+    }
+}

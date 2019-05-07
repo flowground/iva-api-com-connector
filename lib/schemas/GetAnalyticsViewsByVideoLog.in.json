@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "ReportTag": {
+            "required": false,
+            "type": "string"
+        },
+        "Start": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "End": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "DateValue": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "today",
+                "yesterday",
+                "two_days_ago",
+                "last_7_days",
+                "last_14_days",
+                "last_28_days",
+                "last_60_days",
+                "last_90_days",
+                "last_365_days"
+            ]
+        },
+        "Limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

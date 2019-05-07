@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "FilePath": {
+            "required": true,
+            "type": "string"
+        },
+        "Redirect": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ExpirationMinutes": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

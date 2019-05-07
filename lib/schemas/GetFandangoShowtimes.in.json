@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "properties": {
+        "TheaterId": {
+            "required": false,
+            "type": "string"
+        },
+        "TheaterIdProvider": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "tms"
+            ]
+        },
+        "Longitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "Latitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "ZipCode": {
+            "required": false,
+            "type": "string"
+        },
+        "Radius": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "StartDateTime": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "EndDateTime": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "StartDisplayDate": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "EndDisplayDate": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "MovieTitle": {
+            "required": false,
+            "type": "string"
+        },
+        "TheaterName": {
+            "required": false,
+            "type": "string"
+        },
+        "MovieId": {
+            "required": false,
+            "type": "string"
+        },
+        "MovieIdProvider": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "fandango",
+                "IVA"
+            ]
+        },
+        "AmenityIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "AmenityIdProvider": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "fandangoApi",
+                "fandango"
+            ]
+        },
+        "Limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

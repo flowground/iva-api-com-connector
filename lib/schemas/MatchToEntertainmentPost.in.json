@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ProgramType": {
+                    "description": "Type of Program to be matched.",
+                    "type": "string"
+                },
+                "Title": {
+                    "description": "Title of Program to be matched.",
+                    "type": "string"
+                },
+                "AlternateTitles": {
+                    "description": "Alternate Titles of Program to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Year": {
+                    "description": "Release Year of Program to be matched.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Cast": {
+                    "description": "Cast members of Program to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Producers": {
+                    "description": "Producers of Program to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Directors": {
+                    "description": "Directors of Program to be matched.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Description": {
+                    "description": "Description of Program to be matched.",
+                    "type": "string"
+                },
+                "Poster": {
+                    "description": "Poster of Program to be matched.",
+                    "type": "string"
+                },
+                "ReleaseDate": {
+                    "description": "Release Date of Program to be matched.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "StringDistance": {
+                    "description": "For fuzzy title match, default is 4, set to 0 for no fuzzy match.",
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "ProgramType"
+            ]
+        }
+    }
+}

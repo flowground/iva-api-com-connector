@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "PublishedId": {
+            "required": true,
+            "type": "string"
+        },
+        "Start": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "End": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

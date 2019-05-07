@@ -1,0 +1,2594 @@
+{
+    "title": "Entertainment Express",
+    "description": "Your Gateway to Building Incredible Movie, TV, and Game Content Discovery Experiences.",
+    "docsUrl": "https://developer.iva-api.com/docs/v2/getting-started",
+    "url": "https://api.apis.guru/v2/specs/iva-api.com/2.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://ee.iva-api.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "ApiKeyHeader": {
+                "label": "Ocp-Apim-Subscription-Key (ApiKeyHeader)",
+                "viewClass": "TextFieldView",
+                "note": "Authorize requests passing your apiKey in HTTP header."
+            },
+            "ApiKeyQuery": {
+                "label": "subscription-Key (ApiKeyQuery)",
+                "viewClass": "TextFieldView",
+                "note": "Authorize requests passing your apiKey in Querystring."
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "GetAnalyticsViewersByCity": {
+            "main": "./lib/actions/GetAnalyticsViewersByCity.js",
+            "title": "Viewers by City.",
+            "description": "No required parameters, DateValue defaults to Today..",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewersByCity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewersByCountry": {
+            "main": "./lib/actions/GetAnalyticsViewersByCountry.js",
+            "title": "Viewers by Country.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewersByCountry.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticEngagementActions": {
+            "main": "./lib/actions/GetAnalyticEngagementActions.js",
+            "title": "Visits by IP.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticEngagementActions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsEngagementTimes": {
+            "main": "./lib/actions/GetAnalyticsEngagementTimes.js",
+            "title": "View count by Frequency.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsEngagementTimes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsGBUsage": {
+            "main": "./lib/actions/GetAnalyticsGBUsage.js",
+            "title": "GB Usage.",
+            "description": "Requires a valid Customer ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsGBUsage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsMostActive": {
+            "main": "./lib/actions/GetAnalyticsMostActive.js",
+            "title": "Most Active Visitors by IP.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsMostActive.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewersByPlatformHardware": {
+            "main": "./lib/actions/GetAnalyticsViewersByPlatformHardware.js",
+            "title": "Viewers by Platform Hardware.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewersByPlatformHardware.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewersByPlatformOS": {
+            "main": "./lib/actions/GetAnalyticsViewersByPlatformOS.js",
+            "title": "Viewers by Platform OS.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewersByPlatformOS.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsRecentVisitors": {
+            "main": "./lib/actions/GetAnalyticsRecentVisitors.js",
+            "title": "Most Recent Visitors by Time.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsRecentVisitors.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsSummary": {
+            "main": "./lib/actions/GetAnalyticsSummary.js",
+            "title": "Summary of views, viewers, etc.",
+            "description": "Requires a valid Customer ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsSummary.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsTitleReport": {
+            "main": "./lib/actions/GetAnalyticsTitleReport.js",
+            "title": "Title Report by Video ID.",
+            "description": "Requires a valid published ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsTitleReport.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewsByVideoLog": {
+            "main": "./lib/actions/GetAnalyticsViewsByVideoLog.js",
+            "title": "Views by Video.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewsByVideoLog.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewers": {
+            "main": "./lib/actions/GetAnalyticsViewers.js",
+            "title": "Viewers by Day.",
+            "description": "Optional DateValue for length of report.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViews": {
+            "main": "./lib/actions/GetAnalyticsViews.js",
+            "title": "Views by Day.",
+            "description": "Optional DateValue for length of report.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViews.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAnalyticsViewersByWebBrowsers": {
+            "main": "./lib/actions/GetAnalyticsViewersByWebBrowsers.js",
+            "title": "Viewers by Web Browser.",
+            "description": "No required parameters, DateValue defaults to Today.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAnalyticsViewersByWebBrowsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCelebrityRanked": {
+            "main": "./lib/actions/GetCelebrityRanked.js",
+            "title": "Find Celebrity by Name ordered by rank.",
+            "description": "Find celebrity using name ordered by rank.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCelebrityRanked.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchCelebrityGet": {
+            "main": "./lib/actions/SearchCelebrityGet.js",
+            "title": "Search celebrities.",
+            "description": "Search celebrity meta data and images.  Each image in our database is related to a specific movie, TV or game title and is promotional of that title.  If you have title pages or articles about that title, then offering an image gallery on that page is obviously promotional.  If you are doing editorial about another topic and use an image from IVA, you need to reference or otherwise indicate the title of the film, TV show or game so as to be promotional.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchCelebrityGet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchCelebrityPost": {
+            "main": "./lib/actions/SearchCelebrityPost.js",
+            "title": "Search celebrities.",
+            "description": "Search celebrity meta data and images.  Each image in our database is related to a specific movie, TV or game title and is promotional of that title.  If you have title pages or articles about that title, then offering an image gallery on that page is obviously promotional.  If you are doing editorial about another topic and use an image from IVA, you need to reference or otherwise indicate the title of the film, TV show or game so as to be promotional.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchCelebrityPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEpisodeChangeHistory": {
+            "main": "./lib/actions/GetEpisodeChangeHistory.js",
+            "title": "Returns list of unique EpisodeId changes greater than or equal to date (UTC)",
+            "description": "For each updated episode ID, pull the full episode data for that ID and update.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEpisodeChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEpisodeChangeHistoryWithEntity": {
+            "main": "./lib/actions/GetEpisodeChangeHistoryWithEntity.js",
+            "title": "Returns list of unique EpisodeId and Entity changes greater than or equal to date (UTC).",
+            "description": "Lists each episode ID that has changed as well as the entity in the object that changed.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEpisodeChangeHistoryWithEntity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGameChangeHistory": {
+            "main": "./lib/actions/GetGameChangeHistory.js",
+            "title": "Returns list of unique GameId changes greater than or equal to date (UTC).",
+            "description": "Requires a valid Date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGameChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieChangeHistory": {
+            "main": "./lib/actions/GetMovieChangeHistory.js",
+            "title": "Returns list of unique MovieId changes greater than or equal to date (UTC).",
+            "description": "Use to get the ID's of the movies that have been added or changed and use /Movies/{ID} to get back the object with the updated data and replace in your database.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieChangeHistoryWithEntity": {
+            "main": "./lib/actions/GetMovieChangeHistoryWithEntity.js",
+            "title": "\nReturns list of unique MovieId and Entity changes greater than or equal to date (UTC).",
+            "description": "Same as /Changes/Movies/History but with the specific entities that have changed inside the MovieResponse.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieChangeHistoryWithEntity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPersonChangeHistory": {
+            "main": "./lib/actions/GetPersonChangeHistory.js",
+            "title": "Returns list of unique PersonId changes greater than or equal to date (UTC).",
+            "description": "Requires a valid Date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPersonChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPersonChangeHistoryWithEntity": {
+            "main": "./lib/actions/GetPersonChangeHistoryWithEntity.js",
+            "title": "Returns list of unique PersonId and Entity changes greater than or equal to date (UTC).",
+            "description": "Requires a valid Date.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPersonChangeHistoryWithEntity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSeasonChangeHistory": {
+            "main": "./lib/actions/GetSeasonChangeHistory.js",
+            "title": "Returns list of unique SeasonId changes greater than or equal to date (UTC).",
+            "description": "Use if you want to check for specific updates to season records.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSeasonChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSeasonChangeHistoryWithEntity": {
+            "main": "./lib/actions/GetSeasonChangeHistoryWithEntity.js",
+            "title": "Returns list of unique SeasonId and Entity changes greater than or equal to date (UTC).",
+            "description": "Returns list of new or changed SeasonIds with the entity that has changed.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSeasonChangeHistoryWithEntity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowChangeHistory": {
+            "main": "./lib/actions/GetShowChangeHistory.js",
+            "title": "Returns list of unique ShowId changes greater than or equal to date (UTC).",
+            "description": "All new and updated shows from requested date and time.  When a record gets updated, use the ID to get the full show object and replace the data in your cache.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowChangeHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowChangeHistoryWithEntity": {
+            "main": "./lib/actions/GetShowChangeHistoryWithEntity.js",
+            "title": "Returns list of unique ShowId and Entity changes greater than or equal to date (UTC).",
+            "description": "Returns a list of ShowId and entity of any show that has been updated.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowChangeHistoryWithEntity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetChartMoviesBoxoffice": {
+            "main": "./lib/actions/GetChartMoviesBoxoffice.js",
+            "title": "List of Movies (Weekend box office revenue).",
+            "description": "Returns top 10 box office movies.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetChartMoviesBoxoffice.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetChartMoviesMostAnticipated": {
+            "main": "./lib/actions/GetChartMoviesMostAnticipated.js",
+            "title": "List of Movies (Most Anticipated).",
+            "description": "Requires Skip and Take. Maximum page size is 100.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetChartMoviesMostAnticipated.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetChartMoviesPopular": {
+            "main": "./lib/actions/GetChartMoviesPopular.js",
+            "title": "List of Movies based on popularity.",
+            "description": "Requires Skip and Take. Maximum page size is 100.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetChartMoviesPopular.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetChartPeoplePopular": {
+            "main": "./lib/actions/GetChartPeoplePopular.js",
+            "title": "List of Celebrities based on popularity.",
+            "description": "Requires Skip and Take. Maximum page size is 100.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetChartPeoplePopular.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetChartShowsPopular": {
+            "main": "./lib/actions/GetChartShowsPopular.js",
+            "title": "List of Shows based on popularity.",
+            "description": "Requires Skip and Take. Maximum page size is 100.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetChartShowsPopular.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCompanies": {
+            "main": "./lib/actions/GetCompanies.js",
+            "title": "List of Companies (with paging).",
+            "description": "Companies are listed in a movie, show, or game response as those whom are involved with the program.  EX: Universal Pictures.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCompanies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCountries": {
+            "main": "./lib/actions/GetCountries.js",
+            "title": "List of Countries.",
+            "description": "List of Countries, ISO codes and Country IDs used throughout the API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCountries.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetCommonEnumerators": {
+            "main": "./lib/actions/GetCommonEnumerators.js",
+            "title": "List of Common Enumerators.",
+            "description": "Provider enumerator has values added regularly.  Update your SDK to refresh these values.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetCommonEnumerators.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetImageTypes": {
+            "main": "./lib/actions/GetImageTypes.js",
+            "title": "List of Image Types.",
+            "description": "A list of image types available in the IVA database. **EX: Poster**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetImageTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetLanguages": {
+            "main": "./lib/actions/GetLanguages.js",
+            "title": "List of Languages.",
+            "description": "Returns a list of languages used in the API as well as the ISO code and language ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetLanguages.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetOriginatingNetworks": {
+            "main": "./lib/actions/GetOriginatingNetworks.js",
+            "title": "List of Originating Networks.",
+            "description": "No parameters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetOriginatingNetworks.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTags": {
+            "main": "./lib/actions/GetTags.js",
+            "title": "List of Tags (with paging",
+            "description": "Paged list of all tags used in the API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTags.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVideoTypes": {
+            "main": "./lib/actions/GetVideoTypes.js",
+            "title": "List of Video Types.",
+            "description": "Returns a list of the types of videos that can be associated to a title.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVideoTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToEntertainmentGet": {
+            "main": "./lib/actions/MatchToEntertainmentGet.js",
+            "title": "Match a program using Title, Year, Cast, Director.",
+            "description": "Requires a valid program type and at least a title. Matches to Entertainment Programs of given type, returns all candidates that achieved the highest score, ties possible.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToEntertainmentGet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToEntertainmentPost": {
+            "main": "./lib/actions/MatchToEntertainmentPost.js",
+            "title": "Match a program using Title, Year, Cast, Director.",
+            "description": "Requires a valid program type and at least a title. Matches to Entertainment Programs of given type, returns all candidates that achieved the highest score, ties possible.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToEntertainmentPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchEntertainmentGet": {
+            "main": "./lib/actions/SearchEntertainmentGet.js",
+            "title": "Search all entertainment programs.",
+            "description": "Search movies, shows, seasons, episodes, and games.  Each image in our database is related to a specific movie, TV or game title and is promotional of that title.  If you have title pages or articles about that title, then offering an image gallery on that page is obviously promotional.  If you are doing editorial about another topic and use an image from IVA, you need to reference or otherwise indicate the title of the film, TV show or game so as to be promotional.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchEntertainmentGet.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchEntertainmentPost": {
+            "main": "./lib/actions/SearchEntertainmentPost.js",
+            "title": "Search all entertainment programs.",
+            "description": "Search movies, shows, seasons, episodes, and games.  Each image in our database is related to a specific movie, TV or game title and is promotional of that title.  If you have title pages or articles about that title, then offering an image gallery on that page is obviously promotional.  If you are doing editorial about another topic and use an image from IVA, you need to reference or otherwise indicate the title of the film, TV show or game so as to be promotional.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchEntertainmentPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGracenoteMovieIds": {
+            "main": "./lib/actions/GetGracenoteMovieIds.js",
+            "title": "Returns list of all MovieId, Gracenote Id pairs.",
+            "description": "Not accessible with a Demo account.  **Special permissions needed** for access to this operation.  Contact [Sales](mailto:sales@internetvideoarchive.com).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGracenoteMovieIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGracenoteShowIds": {
+            "main": "./lib/actions/GetGracenoteShowIds.js",
+            "title": "Returns list of all ShowId, Gracenote Id pairs.",
+            "description": "Not accessible with a Demo account. **Special permissions needed** for access to this operation. Contact [Sales](mailto:sales@internetvideoarchive.com).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGracenoteShowIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetImdbMovieIds": {
+            "main": "./lib/actions/GetImdbMovieIds.js",
+            "title": "Returns list of all MovieId, IMDB Id pairs.",
+            "description": "Ingest this ID map to create connections between the objects in your existing database with an IMDB ID to the IVA Movie objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetImdbMovieIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetImdbShowIds": {
+            "main": "./lib/actions/GetImdbShowIds.js",
+            "title": "Returns list of all MovieId, Tmdb Id pairs.",
+            "description": "ngest this ID map to create connections between the objects in your existing database with an IMDB ID to the IVA Show objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetImdbShowIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTivoMovieIds": {
+            "main": "./lib/actions/GetTivoMovieIds.js",
+            "title": "Returns list of all MovieId, Tivo Id pairs.",
+            "description": "Not accessible with a Demo account. **Special permissions needed** for access to this operation. Contact [Sales](mailto:sales@internetvideoarchive.com).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTivoMovieIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTivoShowIds": {
+            "main": "./lib/actions/GetTivoShowIds.js",
+            "title": "Returns list of all ShowId, Tivo Id pairs.",
+            "description": "Not accessible with a Demo account. **Special permissions needed** for access to this operation. Contact [Sales](mailto:sales@internetvideoarchive.com).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTivoShowIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTmdbMovieIds": {
+            "main": "./lib/actions/GetTmdbMovieIds.js",
+            "title": "Returns list of all MovieId, Tmdb Id pairs.",
+            "description": "Use to link a TMDB ID to an IVA Movie ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTmdbMovieIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTmdbShowIds": {
+            "main": "./lib/actions/GetTmdbShowIds.js",
+            "title": "Returns list of all ShowId, TMDB Id pairs.",
+            "description": "Use to link a TMDB ID to an IVA Show ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTmdbShowIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetWebediaMovieIds": {
+            "main": "./lib/actions/GetWebediaMovieIds.js",
+            "title": "Returns list of all MovieId, Webedia Id pairs.",
+            "description": "Not accessible with a Demo account. **Special permissions needed** for access to this operation. Contact [Sales](mailto:sales@internetvideoarchive.com).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetWebediaMovieIds.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoGeoLocationPostalCode": {
+            "main": "./lib/actions/GetFandangoGeoLocationPostalCode.js",
+            "title": "Gets geo-location data for a postal code.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoGeoLocationPostalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoGeoLocationCity": {
+            "main": "./lib/actions/GetFandangoGeoLocationCity.js",
+            "title": "Gets geo-location data for a city.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoGeoLocationCity.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoMovies": {
+            "main": "./lib/actions/GetFandangoMovies.js",
+            "title": "Search for movies available.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoMovies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoMovie": {
+            "main": "./lib/actions/GetFandangoMovie.js",
+            "title": "Gets a movie.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoMovieDisplayDates": {
+            "main": "./lib/actions/GetFandangoMovieDisplayDates.js",
+            "title": "Gets display dates for a movie based on geolocation.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoMovieDisplayDates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoMovieShowtimeGroupings": {
+            "main": "./lib/actions/GetFandangoMovieShowtimeGroupings.js",
+            "title": "Gets movie showtimes grouped by date, theater, format, and amenities.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoMovieShowtimeGroupings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoShowtimes": {
+            "main": "./lib/actions/GetFandangoShowtimes.js",
+            "title": "Gets showtimes by geolocation/theater and date.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoShowtimes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoShowtime": {
+            "main": "./lib/actions/GetFandangoShowtime.js",
+            "title": "Get showtime details by showtime id.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoShowtime.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoTheaters": {
+            "main": "./lib/actions/GetFandangoTheaters.js",
+            "title": "Gets theaters close to a geolocation.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoTheaters.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoTheater": {
+            "main": "./lib/actions/GetFandangoTheater.js",
+            "title": "Gets a theater.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoTheater.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoTheaterDisplayDates": {
+            "main": "./lib/actions/GetFandangoTheaterDisplayDates.js",
+            "title": "Gets display dates for a theater.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoTheaterDisplayDates.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFandangoTheaterShowtimeGroupings": {
+            "main": "./lib/actions/GetFandangoTheaterShowtimeGroupings.js",
+            "title": "Gets theater showtimes grouped by date, movie, format, and amenities.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFandangoTheaterShowtimeGroupings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "FindMovie": {
+            "main": "./lib/actions/FindMovie.js",
+            "title": "Find a movie using third party ID.",
+            "description": "Use FindMovie with a third party ID like IMDB, TMDB, Gracenote, Tivo, etc. to find the corresponding movie in the IVA database.  For a full list of supported ID types see /Movies/AlternateIdTypes. \n\n\n\n`Recommendation: Use with small data sets or for a proof of concept. `",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/FindMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "FindShow": {
+            "main": "./lib/actions/FindShow.js",
+            "title": "Find a TV show using a third party ID.",
+            "description": "Use FindShow with a third party ID like IMDB, TMDB, Gracenote, Tivo, etc. to find the corresponding TV show in the IVA database. For a full list of supported ID types see /Shows/AlternateIdTypes. `Recommendation: Use with small data sets or for a proof of concept. `",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/FindShow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllGames": {
+            "main": "./lib/actions/GetAllGames.js",
+            "title": "Gets all Games.",
+            "description": "Returns a AllGameResponse object containing a list of all games. By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllGames.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGameRanked": {
+            "main": "./lib/actions/GetGameRanked.js",
+            "title": "Find Game by Title ordered by year.",
+            "description": "Find game using title ordered by year.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGameRanked.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGame": {
+            "main": "./lib/actions/GetGame.js",
+            "title": "Get Game by Game ID.",
+            "description": "By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGame.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGoWatchItEpisodeAvailabilities": {
+            "main": "./lib/actions/GetGoWatchItEpisodeAvailabilities.js",
+            "title": "Get GoWatchIt Episode Availability.",
+            "description": "Returns GoWatchit episode availability by Entertainment Episode ID. Special permission is required to access this endpoint. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGoWatchItEpisodeAvailabilities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGoWatchItMovieAvailabilities": {
+            "main": "./lib/actions/GetGoWatchItMovieAvailabilities.js",
+            "title": "Get GoWatchIt Movie Availability.",
+            "description": "Returns GoWatchIt movie availability by Entertainment Movie ID.  Special permission is required to access this endpoint.  Contact [Sales](mailto:Sales@InternetVideoArchive.com) for more information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGoWatchItMovieAvailabilities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGoWatchItSeasonAvailabilities": {
+            "main": "./lib/actions/GetGoWatchItSeasonAvailabilities.js",
+            "title": "Get GoWatchIt Season Availability.",
+            "description": "Returns GoWatchIt season availability by Entertainment Season ID.  Special permission is required to access this endpoint.  Contact [Sales](mailto:Sales@InternetVideoArchive.com) for more information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGoWatchItSeasonAvailabilities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetGoWatchItShowAvailabilities": {
+            "main": "./lib/actions/GetGoWatchItShowAvailabilities.js",
+            "title": "Get GoWatchItShow Availability.",
+            "description": "Returns GoWatchIt show availability by Entertainment Show ID.  Special permission is required to access this endpoint. Please contact [Sales](mailto:Sales@InternetVideoArchive.com) for more information.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetGoWatchItShowAvailabilities.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetImageBatch": {
+            "main": "./lib/actions/GetImageBatch.js",
+            "title": "List of Batch Image.",
+            "description": "Requires a list filepath.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetImageBatch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetScreenCaptureBatch": {
+            "main": "./lib/actions/GetScreenCaptureBatch.js",
+            "title": "List of Screen Capture Responses.",
+            "description": "Requires a list of filepaths.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetScreenCaptureBatch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetScreenCapture": {
+            "main": "./lib/actions/GetScreenCapture.js",
+            "title": "Redirect to a Screen Capture.",
+            "description": "Requires a valid filepath of a video asset screen capture.  \n\n`Note: The swagger U/I does not support redirects.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetScreenCapture.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetImage": {
+            "main": "./lib/actions/GetImage.js",
+            "title": "Redirect to an Image.",
+            "description": "Images should be downloaded and stored on the client server. Use /Common/ImageTypes to see a list of available image types.  \n\n\n`Note: The swagger U/I does not support redirects.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetImage.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMetacriticMovie": {
+            "main": "./lib/actions/GetMetacriticMovie.js",
+            "title": "Get Metacritic Movie information.",
+            "description": "Returns Metacritic Movie information by Entertainment Movie ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMetacriticMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMetacriticTv": {
+            "main": "./lib/actions/GetMetacriticTv.js",
+            "title": "Get Metacritic TV information.",
+            "description": "Returns Metacritic TV information by Entertainment Show ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMetacriticTv.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllMovies": {
+            "main": "./lib/actions/GetAllMovies.js",
+            "title": "Returns a paged list of all movies.",
+            "description": "By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter.   \n\n\n`Subscriptions with \"Limited\" data will only be able to include basic title information and Videos.`  \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllMovies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieAlternateIdTypes": {
+            "main": "./lib/actions/GetMovieAlternateIdTypes.js",
+            "title": "Returns all MovieAlternateIdTypes",
+            "description": "Movie alternate ID types refer to 3rd party IDs that IVA matches its own movie IDs.  **EX: IMDB, TMDB**.  \n\n`Use to get the Id of the ID type to use with /Find/Movie.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieAlternateIdTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMoviesComingSoon": {
+            "main": "./lib/actions/GetMoviesComingSoon.js",
+            "title": "Returns list of all Movies coming to US Theaters.",
+            "description": "Requires Skip and Take. Maximum page size is 10.\n\nBy default the API will only return basic title information.\nAdditional objects can be included by passing the object in the Includes parameter in a comma separated list. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMoviesComingSoon.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMoviesInTheaters": {
+            "main": "./lib/actions/GetMoviesInTheaters.js",
+            "title": "Returns list of all Movies currently in US Theaters.",
+            "description": "Requires Skip and Take. Maximum page size is 10.\n\nBy default the API will only return basic title information.\nAdditional objects can be included by passing the object in the Includes parameter in a comma separated list. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMoviesInTheaters.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToMovie": {
+            "main": "./lib/actions/MatchToMovie.js",
+            "title": "Perform a match to Entertainment using Title, Year, Cast and Director. Returns best match and score for the match.",
+            "description": "Use to match IVA movie data to another data source using title, year, cast etc.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToMoviePost": {
+            "main": "./lib/actions/MatchToMoviePost.js",
+            "title": "Perform a match to Entertainment using Title, Year, Cast and Director.  Returns best match and score for the match.",
+            "description": "Requires a valid MatchMovieCandidate, matches to Entertainment Movies",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToMoviePost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieCertifications": {
+            "main": "./lib/actions/GetMovieCertifications.js",
+            "title": "List of Movie Certifications",
+            "description": "Returns all Movie Certifications used in a movie response with the Releases object.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieCertifications.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieGenres": {
+            "main": "./lib/actions/GetMovieGenres.js",
+            "title": "List of Movie Genres",
+            "description": "List of all movie genres used in the API.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieGenres.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovieReleaseTypes": {
+            "main": "./lib/actions/GetMovieReleaseTypes.js",
+            "title": "List of Movie Release Types",
+            "description": "Release type refers to the release. **EX: Theatrical, Home Video, etc.**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovieReleaseTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchAndDiscoverMovie": {
+            "main": "./lib/actions/SearchAndDiscoverMovie.js",
+            "title": "Search and discover movies.",
+            "description": "Searchable Fields:\nTitle, AlternateTitles, Genres, OriginalReleaseDate, UnitedStatesReleaseDate, GermanyReleaseDate, FranceReleaseDate, UnitedKingdomReleaseDate, ItalyReleaseDate, JapanReleaseDate, Tags, Cast, Directors, Descriptions, Ratings, OriginalLanguage.\n[Syntax Ref](https://docs.microsoft.com/en-us/rest/api/searchservice/simple-query-syntax-in-azure-search)\n\nFilterable Fields:\nID, Title, AlternateTitles, Genres, OriginalReleaseDate, UnitedStatesReleaseDate, GermanyReleaseDate, FranceReleaseDate, UnitedKingdomReleaseDate, ItalyReleaseDate, JapanReleaseDate, Year, Tags, Cast, Directors, Descriptions, HasVideo, PosterFilePath, Ratings, OriginalLanguage, Runtime, Budget, Revenue, Created, Modified.\n[Syntax Ref](https://docs.microsoft.com/en-us/rest/api/searchservice/odata-expression-syntax-for-azure-search)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchAndDiscoverMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMovie": {
+            "main": "./lib/actions/GetMovie.js",
+            "title": "Returns movie data for a specific IVA MovieId.",
+            "description": "By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter.   \n\n\n`Subscriptions with \"Limited\" data will only be able to include basic title information and Videos.`  \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMovie.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateMyProgram": {
+            "main": "./lib/actions/CreateMyProgram.js",
+            "title": "Create new Program.",
+            "description": "Create new Program.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateMyProgram.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateMyProgram": {
+            "main": "./lib/actions/UpdateMyProgram.js",
+            "title": "Update a Program.",
+            "description": "Update a Program.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateMyProgram.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllMyPrograms": {
+            "main": "./lib/actions/GetAllMyPrograms.js",
+            "title": "Returns all Programs.",
+            "description": "Get all Programs.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllMyPrograms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMyProgram": {
+            "main": "./lib/actions/GetMyProgram.js",
+            "title": "Get a Program by ID.",
+            "description": "Requires a valid Program ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMyProgram.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateMyVideo": {
+            "main": "./lib/actions/CreateMyVideo.js",
+            "title": "Create new Video.",
+            "description": "Create new Video.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateMyVideo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateMyVideo": {
+            "main": "./lib/actions/UpdateMyVideo.js",
+            "title": "Update a Video.",
+            "description": "Update a Video.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateMyVideo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllMyVideos": {
+            "main": "./lib/actions/GetAllMyVideos.js",
+            "title": "Returns all Videos.",
+            "description": "Get all Videos.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllMyVideos.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMyVideo": {
+            "main": "./lib/actions/GetMyVideo.js",
+            "title": "Get a Video by ID.",
+            "description": "Requires a valid Video ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMyVideo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllPeople": {
+            "main": "./lib/actions/GetAllPeople.js",
+            "title": "Gets all People.",
+            "description": "Returns a AllPeopleResponse object containing a list of all poeple.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllPeople.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPersonRankedSearch": {
+            "main": "./lib/actions/GetPersonRankedSearch.js",
+            "title": "Find Person by Name ordered by rank.",
+            "description": "Find person using name ordered by rank.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPersonRankedSearch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetPerson": {
+            "main": "./lib/actions/GetPerson.js",
+            "title": "Returns information on a person.",
+            "description": "BETA - By default the API will only return basic People information. Additional objects can be included by passing the object in the Includes parameter.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetPerson.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetFilmography": {
+            "main": "./lib/actions/GetFilmography.js",
+            "title": "Get a Person's Filmography.",
+            "description": "Requires a valid Person ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetFilmography.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateRevCaptionOrder": {
+            "main": "./lib/actions/CreateRevCaptionOrder.js",
+            "title": "Creates a caption order for given Video Ids.",
+            "description": "Requires at least one Video ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateRevCaptionOrder.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRevCaptions": {
+            "main": "./lib/actions/GetRevCaptions.js",
+            "title": "List of Caption Orders.",
+            "description": "Orders are paged. Use Order ID to retrieve the caption attachment.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRevCaptions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRevCaptionAttachmentContent": {
+            "main": "./lib/actions/GetRevCaptionAttachmentContent.js",
+            "title": "Caption text.",
+            "description": "Requires caption OrderId and Type of caption.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRevCaptionAttachmentContent.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSDK": {
+            "main": "./lib/actions/GetSDK.js",
+            "title": "Returns a zip file of client SDK.",
+            "description": "Generate and download SDK's for using the API.  Requires a subscription key for authorization and a valid client.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSDK.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAllShows": {
+            "main": "./lib/actions/GetAllShows.js",
+            "title": "Returns a paged list of all TV shows.",
+            "description": "By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter. \n\n\n`Subscriptions with \"Limited\" data will only be able to include basic title information, Videos, EpisodicVideos, and SeasonVideos.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAllShows.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowAlternateIdTypes": {
+            "main": "./lib/actions/GetShowAlternateIdTypes.js",
+            "title": "List of External Id Types",
+            "description": "Alternate Id types refer to the 3rd party ID sets IVA data has matched.  **Ex: IMDB**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowAlternateIdTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToShow": {
+            "main": "./lib/actions/MatchToShow.js",
+            "title": "Perform a match to Entertainment using Title, Year, Cast and Director. Returns best match and score for the match.",
+            "description": "Use to match IVA show data to another data source using title, director, cast, etc.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToShow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MatchToShowPost": {
+            "main": "./lib/actions/MatchToShowPost.js",
+            "title": "Perform a match to Entertainment using Title, Year, Cast and Director.  Returns best match and score for the match.",
+            "description": "Requires a valid MatchShowCandidate, matches to Entertainment Shows",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MatchToShowPost.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowReleaseTypes": {
+            "main": "./lib/actions/GetShowReleaseTypes.js",
+            "title": "List of Show Release Types",
+            "description": "Release types refer to the type of release and are used in the releases object for a show.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowReleaseTypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SearchAndDiscoverShow": {
+            "main": "./lib/actions/SearchAndDiscoverShow.js",
+            "title": "Search and discover shows.",
+            "description": "Searchable Fields: Title, AlternateTitles, Genres, Tags, Cast, Directors, Descriptions, Ratings, OriginalLanguage. [Syntax Ref](https://docs.microsoft.com/en-us/rest/api/searchservice/simple-query-syntax-in-azure-search)\n\nFilterable Fields: Id, Title, AlternateTitles, Genres, OriginalAirDate, Year, Tags, Cast, Directors, Descriptions, HasVideo, ImageFilePath, Ratings, OriginalLanguage, Created, Modified, NumberOfSeasons, NumberOfEpisodes. [Syntax Ref](https://docs.microsoft.com/en-us/rest/api/searchservice/simple-query-syntax-in-azure-search)",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SearchAndDiscoverShow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSeasonByNumber": {
+            "main": "./lib/actions/GetSeasonByNumber.js",
+            "title": "Get Season by ShowId and Season Number.",
+            "description": "Use the IVA ShowId and a season number to get a season details and video asset data.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSeasonByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEpisodeByNumber": {
+            "main": "./lib/actions/GetEpisodeByNumber.js",
+            "title": "Get Episode by ShowId, Season Number and Episode Number.",
+            "description": "Some use cases find it useful to be able to pass a season number and episode number of a known show to get the data for that exact episode.  ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEpisodeByNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEpisode": {
+            "main": "./lib/actions/GetEpisode.js",
+            "title": "Returns an Episode object for a requested Episode ID.",
+            "description": "Returns the episode details for a specific episode ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEpisode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSeason": {
+            "main": "./lib/actions/GetSeason.js",
+            "title": "Get Season by SeasonId.",
+            "description": "Use with a SeasonId to return details for a season including any video asset data.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSeason.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowCertifications": {
+            "main": "./lib/actions/GetShowCertifications.js",
+            "title": "List of Show Certifications",
+            "description": "List of Show Certifications and definitions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowCertifications.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShowGenres": {
+            "main": "./lib/actions/GetShowGenres.js",
+            "title": "List of Show Genres",
+            "description": "Returns a list of all the show genres used in the IVA database.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShowGenres.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetShow": {
+            "main": "./lib/actions/GetShow.js",
+            "title": "Get Show by Show ID.",
+            "description": "By default the API will only return basic title information. Additional objects can be included by passing the object in the Includes parameter.  \n\n\n`Subscriptions with \"Limited\" data will only be able to include basic title information, Videos, EpisodicVideos, and SeasonVideos.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetShow.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSeasonBySeasonNumber": {
+            "main": "./lib/actions/GetSeasonBySeasonNumber.js",
+            "title": "Get Season by ShowId and Season Number.",
+            "description": "Depreciated. Use GetSeasonBySeasonNumber instead.  Requires a valid ShowId and Season Number.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSeasonBySeasonNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetEpisodeByEpisodeNumber": {
+            "main": "./lib/actions/GetEpisodeByEpisodeNumber.js",
+            "title": "Get Episode by ShowId, Season Number and Episode Number.",
+            "description": "Requires a valid ShowId, Season Number and Episode Number.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetEpisodeByEpisodeNumber.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTestDateTime": {
+            "main": "./lib/actions/GetTestDateTime.js",
+            "title": "Returns translated time from IVA or an error if invalid.",
+            "description": "Entertainment Express APIs use date time format ISO 8601.  Use this API to test your date time format to see if it translates to a valid time on our server.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTestDateTime.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTheatricalMovies": {
+            "main": "./lib/actions/GetTheatricalMovies.js",
+            "title": "Returns list of all US Theatrical Movie objects.",
+            "description": "Deprecated. Use /Movies/InTheaters or /Movies/ComingSoon instead. Returns all movies with a US Theatrical Release Date > today - 60 days.  Use the includes parameter to include additional objects related to the movie.  The includes parameter takes a comma separated list of objects.  **EX: Genres,Descriptions,Videos**    \n\n\n\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTheatricalMovies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVideosById": {
+            "main": "./lib/actions/GetVideosById.js",
+            "title": "List of Videos for a program.",
+            "description": "List of Videos for a program.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVideosById.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaMovieGenres": {
+            "main": "./lib/actions/GetTvMediaMovieGenres.js",
+            "title": "Gets list of movie genres.",
+            "description": "Gets list of movie genres.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaMovieGenres.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaShowGenres": {
+            "main": "./lib/actions/GetTvMediaShowGenres.js",
+            "title": "Gets list of show genres.",
+            "description": "Gets list of show genres.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaShowGenres.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaSportGenres": {
+            "main": "./lib/actions/GetTvMediaSportGenres.js",
+            "title": "Gets list of sports genres.",
+            "description": "Gets list of sports genres.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaSportGenres.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLeagues": {
+            "main": "./lib/actions/GetTvMediaLeagues.js",
+            "title": "Gets list of sports leagues.",
+            "description": "Gets list of sports leagues.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLeagues.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLeagueListings": {
+            "main": "./lib/actions/GetTvMediaLeagueListings.js",
+            "title": "Retrieve listings for a given leagueID.",
+            "description": "Retrieve listings for a given leagueID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLeagueListings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaTeams": {
+            "main": "./lib/actions/GetTvMediaTeams.js",
+            "title": "Gets list of teams in a league.",
+            "description": "Gets list of teams in a league.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaTeams.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupsByPostalCode": {
+            "main": "./lib/actions/GetTvMediaLineupsByPostalCode.js",
+            "title": "Get lineups by postal code.",
+            "description": "Get lineups by postal code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupsByPostalCode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaCountries": {
+            "main": "./lib/actions/GetTvMediaCountries.js",
+            "title": "Starting point for lineup browser, returns available countries.",
+            "description": "Starting point for lineup browser, returns available countries.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaCountries.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaRegions": {
+            "main": "./lib/actions/GetTvMediaRegions.js",
+            "title": "Browse regions by country.",
+            "description": "Browse regions by country.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaRegions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaServiceAreas": {
+            "main": "./lib/actions/GetTvMediaServiceAreas.js",
+            "title": "Get service areas for a specific country and region.",
+            "description": "Get service areas for a specific country and region.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaServiceAreas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupsByAreaID": {
+            "main": "./lib/actions/GetTvMediaLineupsByAreaID.js",
+            "title": "Get lineups by AreaID.",
+            "description": "Get lineups by AreaID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupsByAreaID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupsByLatitudeLongitude": {
+            "main": "./lib/actions/GetTvMediaLineupsByLatitudeLongitude.js",
+            "title": "Get lineups by latitude and longitude.",
+            "description": "Get lineups by latitude and longitude.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupsByLatitudeLongitude.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupByID": {
+            "main": "./lib/actions/GetTvMediaLineupByID.js",
+            "title": "Get lineups by specific LineupID.",
+            "description": "Get lineups by specific LineupID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupByID.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupListings": {
+            "main": "./lib/actions/GetTvMediaLineupListings.js",
+            "title": "Retrieve individual listings for a given lineup ordered by start time (listDateTime) and channel number; unless using the search parameter, in which case they will be ordered by search term relevance.",
+            "description": "Retrieve individual listings for a given lineup ordered by start time (listDateTime) and channel number; unless using the search parameter, in which case they will be ordered by search term relevance.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupListings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupListingsGrid": {
+            "main": "./lib/actions/GetTvMediaLineupListingsGrid.js",
+            "title": "A collection of listings grouped by channel and ordered by listDateTime. The grid dimensions ( time x channels ) can be modified by using the start, end, startchan and maxchan parameters. Channels without any listings will be returned with an empty listings collection.",
+            "description": "A collection of listings grouped by channel and ordered by listDateTime. The grid dimensions ( time x channels ) can be modified by using the start, end, startchan and maxchan parameters. Channels without any listings will be returned with an empty listings collection.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupListingsGrid.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaLineupListingsHighlights": {
+            "main": "./lib/actions/GetTvMediaLineupListingsHighlights.js",
+            "title": "Retrieves featured listings. setting a start and/or end time for every request is a highly recommended.",
+            "description": "Retrieves featured listings. setting a start and/or end time for every request is a highly recommended.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaLineupListingsHighlights.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaGenericLineups": {
+            "main": "./lib/actions/GetTvMediaGenericLineups.js",
+            "title": "Get list of generic lineup IDs that can be used.  A 'generic' lineup is not a real lineup, but a collection of stations defined by TV Media.  Any listing retrieved using a generic lineup will not return any channel number information, as it is irrelevant.",
+            "description": "Get list of generic lineup IDs that can be used.  A 'generic' lineup is not a real lineup, but a collection of stations defined by TV Media.  Any listing retrieved using a generic lineup will not return any channel number information, as it is irrelevant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaGenericLineups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaStation": {
+            "main": "./lib/actions/GetTvMediaStation.js",
+            "title": "Gets station details by ID.",
+            "description": "Gets station details by ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaStation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaListingsByStation": {
+            "main": "./lib/actions/GetTvMediaListingsByStation.js",
+            "title": "Stations are not tied to lineups, therefore no channel numbers will be present in the response, unlike most other listing operations.",
+            "description": "Get listings for a given station.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaListingsByStation.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaTeamById": {
+            "main": "./lib/actions/GetTvMediaTeamById.js",
+            "title": "Gets details for a specific team.",
+            "description": "Gets details for a specific team.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaTeamById.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTvMediaTeamListings": {
+            "main": "./lib/actions/GetTvMediaTeamListings.js",
+            "title": "Retrieve listings for a given TeamID.",
+            "description": "Retrieve listings for a given TeamID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTvMediaTeamListings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVideo": {
+            "main": "./lib/actions/GetVideo.js",
+            "title": "Redirect URL to video.",
+            "description": "Returns a URL to the requested video. [Video Format Specs](https://developer.iva-api.com/docs/v1/video-formats)\n\n**Formats:** MP4 = 4, HLS = 11, Dash = 14, HSS = 12, HDS = 13\n\n**MP4 KbRate:** 80, 212, 450, 750, 1500, 2500(HD sources only), 5000 (sources >=  1080p)  \n\n**Adaptive Min/Max rate:** 212000, 350000, 600000, 1200000, 2000000, 2500000, 3500000  \n\n `URLs requested with a Demo account will always return max 750 kbps video.  Full commercial account required for higher bitrates.`",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVideo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetXRoadMediaRecommendations": {
+            "main": "./lib/actions/GetXRoadMediaRecommendations.js",
+            "title": "List of Recommendations for movie or show.",
+            "description": "",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetXRoadMediaRecommendations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

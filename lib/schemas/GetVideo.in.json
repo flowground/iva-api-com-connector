@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "Id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+        },
+        "Format": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "mp4",
+                "hls",
+                "hss",
+                "hds",
+                "dash"
+            ]
+        },
+        "KbRate": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "NOT_SET",
+                "mp4_80",
+                "mp4_212",
+                "mp4_450",
+                "mp4_750",
+                "mp4_1500",
+                "mp4_2500",
+                "mp4_5000",
+                "mp4_8000"
+            ]
+        },
+        "Expires": {
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+        },
+        "ReportTag": {
+            "required": false,
+            "type": "string"
+        },
+        "start": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "end": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "MinRate": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "adap_212000",
+                "adap_350000",
+                "adap_600000",
+                "adap_1200000",
+                "adap_2000000",
+                "adap_2500000",
+                "adap_3500000"
+            ]
+        },
+        "MaxRate": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "adap_212000",
+                "adap_350000",
+                "adap_600000",
+                "adap_1200000",
+                "adap_2000000",
+                "adap_2500000",
+                "adap_3500000"
+            ]
+        }
+    }
+}

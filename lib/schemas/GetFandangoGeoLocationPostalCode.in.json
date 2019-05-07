@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "postalcode": {
+            "required": true,
+            "type": "string"
+        },
+        "country": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

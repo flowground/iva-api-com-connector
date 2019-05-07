@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "Url": {
+                    "description": "Location of the media you wish to upload.",
+                    "type": "string"
+                },
+                "NotificationUrl": {
+                    "description": "Location to have us notify you of video encode status.",
+                    "type": "string"
+                },
+                "ReferenceId": {
+                    "description": "Client reference ID of MyVideo.",
+                    "type": "string"
+                },
+                "Title": {
+                    "description": "Title of MyVideo.",
+                    "type": "string"
+                },
+                "Companies": {
+                    "description": "Companies of MyVideo.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "StartDate": {
+                    "description": "First date of MyVideo availability.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "ExpirationDate": {
+                    "description": "Date MyVideo expires / becomes unavailable for streaming.",
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}

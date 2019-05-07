@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "Date": {
+            "required": true,
+            "type": "string",
+            "format": "date-time"
+        },
+        "Skip": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Take": {
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

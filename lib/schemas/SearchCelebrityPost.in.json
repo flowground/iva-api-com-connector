@@ -1,0 +1,258 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "Package": {
+                    "type": "string"
+                },
+                "Ids": {
+                    "description": "Search person using one or more Ids.  Ex:  Person/123",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "Skip": {
+                    "description": "Rows to skip, used for paging. Default is 0.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Take": {
+                    "description": "Rows to return, used for paging. Default is 10, limit is 50.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "Includes": {
+                    "description": "Include sub objects from the person",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "Images",
+                            "ExternalIds",
+                            "Descriptions",
+                            "AlternateNames"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "Name": {
+                    "description": "Filter results based on Name.",
+                    "type": "string"
+                },
+                "FaceDetails_Age": {
+                    "description": "People with images with estimated age.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "FaceDetails_Beard": {
+                    "description": "People images with a beard.",
+                    "type": "boolean"
+                },
+                "FaceDetails_Mustache": {
+                    "description": "People images with a mustache.",
+                    "type": "boolean"
+                },
+                "FaceDetails_Emotions": {
+                    "description": "Filter People images by emotions.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "UNKNOWN",
+                            "HAPPY",
+                            "SAD",
+                            "ANGRY",
+                            "CONFUSED",
+                            "DISGUSTED",
+                            "SURPRISED",
+                            "CALM"
+                        ],
+                        "type": "string",
+                        "x-nullable": false
+                    }
+                },
+                "FaceDetails_Eyeglasses": {
+                    "description": "People images wearing eyeglasses.",
+                    "type": "boolean"
+                },
+                "FaceDetails_Sunglasses": {
+                    "description": "People images wearing sunglasses.",
+                    "type": "boolean"
+                },
+                "FaceDetails_EyesOpen": {
+                    "description": "People images with eyes open.",
+                    "type": "boolean"
+                },
+                "FaceDetails_MouthOpen": {
+                    "description": "People images with mouth open.",
+                    "type": "boolean"
+                },
+                "FaceDetails_Gender": {
+                    "description": "People images based on gender.",
+                    "type": "string",
+                    "enum": [
+                        "UNKNOWN",
+                        "Male",
+                        "Female"
+                    ]
+                },
+                "FaceDetails_Smile": {
+                    "description": "People images with smile.",
+                    "type": "boolean"
+                },
+                "MinImageHeight": {
+                    "description": "People with images greater than or equal to image height.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "MinImageWidth": {
+                    "description": "People with images greater than or equal to image width.",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ImageType": {
+                    "description": "People with images of type.",
+                    "type": "string",
+                    "enum": [
+                        "UNKNOWN",
+                        "Poster",
+                        "Photo",
+                        "Portrait"
+                    ]
+                },
+                "ImageViolence": {
+                    "description": "People with image violence scores.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5"
+                        ],
+                        "format": "int32",
+                        "type": "integer",
+                        "x-nullable": false
+                    }
+                },
+                "ImageSexuality": {
+                    "description": "People with image sexuality scores.",
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "1",
+                            "2",
+                            "3",
+                            "4",
+                            "5"
+                        ],
+                        "format": "int32",
+                        "type": "integer",
+                        "x-nullable": false
+                    }
+                },
+                "ImageTags": {
+                    "description": "People with image containing tags.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "OfficialImage": {
+                    "description": "Limit People with official images.",
+                    "type": "boolean"
+                },
+                "ImageEntertainmentIds": {
+                    "description": "People with images from EntertainmentIds.  Ex: Movie/1234",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "BirthName": {
+                    "description": "Filter by birth name.",
+                    "type": "string"
+                },
+                "Gender": {
+                    "description": "Filter people by gender. (m or f)",
+                    "type": "string",
+                    "enum": [
+                        "m",
+                        "f"
+                    ]
+                },
+                "BirthDate": {
+                    "description": "Birth Date",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "BirthYear": {
+                    "description": "Birth Year",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "BirthDayOfMonth": {
+                    "description": "Birth Day of Month",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "BirthMonthOfYear": {
+                    "description": "Birth Month of Year",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "DeathDayOfMonth": {
+                    "description": "Birth Day of Month",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "DeathMonthOfYear": {
+                    "description": "Birth Month of Year",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "ExternalId": {
+                    "description": "Filter results matching external Id",
+                    "type": "string"
+                },
+                "ExternalIdType": {
+                    "description": "Filter results matching external Id",
+                    "type": "string",
+                    "enum": [
+                        "IVA",
+                        "TMDB",
+                        "IMDB",
+                        "Facebook",
+                        "Instagram",
+                        "Twitter",
+                        "Freebase_MID",
+                        "Freebase_ID",
+                        "TvRage"
+                    ]
+                },
+                "ModifiedRecordsSince": {
+                    "description": "Filter results based on timestamp.  Returns >= value timestamp (UTC) provided.",
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "SortByTimeStamp": {
+                    "description": "Sort results based on last modified descending.  Default is sorted by _score",
+                    "type": "boolean"
+                },
+                "IncludeDeleted": {
+                    "description": "Include Soft Deleted Records. Default (false)",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

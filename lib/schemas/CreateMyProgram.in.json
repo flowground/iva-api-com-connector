@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "application/json"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ReferenceId": {
+                    "description": "Client reference ID of MyVideo.",
+                    "type": "string"
+                },
+                "Title": {
+                    "description": "Title of MyVideo.",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

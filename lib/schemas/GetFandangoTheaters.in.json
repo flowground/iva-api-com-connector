@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "Longitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "Latitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "ZipCode": {
+            "required": false,
+            "type": "string"
+        },
+        "Radius": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Limit": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Offset": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "Take": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "Skip": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}
